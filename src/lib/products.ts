@@ -8,8 +8,7 @@ import { Product, ProductDetails } from "../types/productTypes";
 export async function getProducts(): Promise<Product[]> {
     const url: string = 'https://api.commbank.com.au/public/cds-au/v1/banking/products';
     const headers = { 'x-v': 3 };
-
-    
+    return Promise.resolve([]); // replace line - stand-in return
 }
 
 /**
@@ -20,5 +19,5 @@ export async function getProducts(): Promise<Product[]> {
 export async function getProductDetails(product_id: string): Promise<ProductDetails> {
     const url: string = 'https://api.commbank.com.au/public/cds-au/v1/banking/products';
     const headers = { 'x-v': 3 };
-
+    return Promise.resolve({}); // replace line - stand-in return
 }
