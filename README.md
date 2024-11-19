@@ -1,4 +1,4 @@
-A node express micrservice.
+A node express microservice.
 ## Development
 
 In order to run this microservice you will need [Node.js](https://nodejs.org/en/) installed locally.
