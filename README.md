@@ -1,2 +1,0 @@
-# cns-backend-assessment
-Assessment
