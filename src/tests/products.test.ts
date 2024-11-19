@@ -18,6 +18,7 @@ describe('Products E2E tests', () => {
             expect(product).toHaveProperty('name');
             expect(product).toHaveProperty('description');
             expect(product).toHaveProperty('brand');
+            expect(product).toHaveProperty('last_updated');
         });
     });
 
