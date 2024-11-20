@@ -15,8 +15,17 @@ router.get('/products', async (req: Request, res: Response, next: (e: Error) => 
         next(error)
     }
 });
-router.get('/productDetails', async (req: Request, res: Response, next: (e: Error) => void): Promise<any> => {
-    
+router.get('/productDetails/:productId', async (req: Request, res: Response, next: (e: Error) => void): Promise<any> => {
+    try{
+        const productId = req.params.productId;
+        const productsDetails = await getProductDetails(productId);
+        res.type('json').send(JSON.stringify(productsDetails, null, 2));
+    }catch(error){
+        //either console or throw error
+        console.error('Error fetching products details:', error);
+        //pass error to express
+        next(error)
+    }
 });
 
 export default router;

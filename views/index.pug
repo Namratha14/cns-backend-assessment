@@ -5,4 +5,11 @@ block layout-content
     h1.Banner Products
       ul
     for product in products
-        li= product.productId
+        li= `Product ID :  ${product.productId}`
+        li= `Product Catregory :  ${product.productCategory}`
+        li= `Product Name :  ${product.name}`
+        li= `Product Description :  ${product.description}`
+        li= `Product Brand :  ${product.brand}`
+        li= `Product Updated :  ${product.lastUpdated}`
+        br
+        br

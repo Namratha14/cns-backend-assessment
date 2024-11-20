@@ -1,12 +1,12 @@
 export interface Product {
-   product_id : number,
-   effective_from? : Date, 
-   effective_to?: Date, 
-   product_category: string, 
+   productId : number,
+   effectiveFrom? : Date, 
+   effectiveTo?: Date, 
+   productCategory: string, 
    name: string, 
    description: string, 
    brand: string 
-   last_updated: Date
+   lastUpdated: Date
 }
 
 export interface ProductDetails {
