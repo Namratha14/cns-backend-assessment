@@ -10,7 +10,7 @@ export interface Product {
 }
 
 export interface ProductDetails {
-   features: string, 
-   eligibility:  string, 
-   fees: string
+   features: string[], 
+   eligibility:  string[], 
+   fees: string[]
 }

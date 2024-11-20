@@ -9,7 +9,11 @@ interface ProductResponse {
     };
 }
 interface ProductDetailsResponse {
-    data: ProductDetails
+    data: {
+        features:string[],
+        eligibility:string[],
+        fees:string[]
+    }
 }
 
 /**
@@ -51,8 +55,13 @@ export async function getProductDetails(product_id: string): Promise<ProductDeta
     const headers = { 'x-v': 4 };
     try{
         const response = await axios.get<ProductDetailsResponse>(url, { headers });
-        const { data } = response.data;
-        return data;
+        const { data : {features, eligibility, fees } } = response.data;
+        const requiredDetails = {
+                features,
+                eligibility,
+                fees
+        }
+        return requiredDetails
     } catch (error) {
         if (axios.isAxiosError(error)) {
             if (error.response) {
