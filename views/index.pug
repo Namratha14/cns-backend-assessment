@@ -5,7 +5,8 @@ block layout-content
     h1.Banner Products
       ul
     for product in products
-        li= `Product ID :  ${product.productId}`
+        li 
+          a(href=`/productDetails/${product.productId}`)= `Product ID :  ${product.productId}`
         li= `Product Catregory :  ${product.productCategory}`
         li= `Product Name :  ${product.name}`
         li= `Product Description :  ${product.description}`

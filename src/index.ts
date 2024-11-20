@@ -13,6 +13,6 @@ app.get('/', (req: Request, res: Response) => {
     // res.render('index', { title: 'Hey', message: 'Hello there!' })
 });
 
-app.use('/cns', appRouter);
+app.use('/', appRouter);
 
 app.listen(port, () => { console.log(`Server started at http://localhost:${port}`) });
