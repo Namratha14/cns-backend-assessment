@@ -10,7 +10,6 @@ app.set('view engine', 'pug');
 
 app.get('/', (req: Request, res: Response) => {
     res.status(200).send('OK');
-    // res.render('index', { title: 'Hey', message: 'Hello there!' })
 });
 
 app.use('/', appRouter);

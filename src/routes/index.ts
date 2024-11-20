@@ -19,6 +19,7 @@ router.get('/productDetails/:productId', async (req: Request, res: Response, nex
     try{
         const productId = req.params.productId;
         const productsDetails = await getProductDetails(productId);
+        //pretty print
         res.type('json').send(JSON.stringify(productsDetails, null, 2));
     }catch(error){
         //either console or throw error
